@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>구구단</title>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous">
+  </script>
+ <script>
+ $(function(e) {
+	 var tag = "";
+	 var dan =3;
+	 
+	 $('button').click(function(e) {
+		 dan = $("#danNum").val();//input에 넣을 출력값을 val이라한다
+       guguDan();
+    });
+	 
+	 function guguDan(){
+		 tag ="";
+	 for(var i=2; i<10; i++){
+	     tag += "<li>"+dan+"X"+i+"="+(i*dan)+"</li>";
+	 }
+  $('#gugu').html("").append(tag);
+	 }
+ });
+ </script>
+</head>
+
+<body>
+<input type="text" id="danNum"><button>출력</button>
+   <ul id="gugu"></ul>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="/happy/css/common.css" type="text/css">
+<style>
+#hd{ text-align:center}
+#hd .top1{ position:relative; padding:25px 0}
+#hd .top1 h1{}
+#hd .top1 .utmenu:after{ content:""; display:block; clear:both}
+#hd .top1 .utmenu{ position:absolute; left:50%; margin-left:200px; top:80px}
+#hd .top1 .utmenu li{float:left; border-left:1px solid black} 
+#hd .top1 .utmenu li:first-child{ border-left-width:0}
+#hd .top1 .utmenu li a{ padding:0 20px}
+/*네비*/
+#hd #gnb:after{ content:""; display:block; clear:both}
+#hd #gnb{ display:inline-block; position:relative; z-index:10 }
+#hd #gnb li{}
+/*대메뉴*/
+#hd #gnb >li{position:relative;float:left; padding:0 20px}
+#hd #gnb li a.d1{ font-size:1.5em; line-height:200%; border-bottom:3px solid white}/*앞에 li가 있기때문에 block값 을 굳이 안줘도된다*/
+#hd #gnb li:hover a.d1{ border-bottom-color:#F00; color:#F00}
+/*소메뉴*/
+#hd #gnb li ul.d2{ position:absolute; width:100%; text-indent:15px; height:0; transition:0.5s; overflow:hidden; left:0}
+#hd #gnb:hover li ul.d2{ height:150px}
+#hd #gnb li ul.d2 li{}
+#hd #gnb li ul.d2 li a{ line-height:180%}
+.bg{ position:absolute; width:100%; border-bottom:1px solid black;transition:0.5s; left:0; height:0px; background-color:#ccc}
+#hd #gnb:hover .bg{ height:150px; }
+
+</style>
+</head>
+
+<body>
+<header id="hd">
+	<div class="top1">
+		<h1><a><img src="https://www.happybath.com/content/dam/happybath/images/common/img-logo.png"></a></h1>
+		<ul class="utmenu">
+			<li><a href="">상단메뉴</a></li>
+			<li><a href="">상단메뉴</a></li>
+			<li><a href="">상단메뉴</a></li>
+			<li><a href="">상단메뉴</a></li>
+			<li><a href="">상단메뉴</a></li>
+		</ul>
+	</div>
+	<ul id="gnb">
+		<li>
+			<a href="" class="d1">대메뉴</a>
+			<ul class="d2">
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="" class="d1">대메뉴</a>
+			<ul class="d2">
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="" class="d1">대메뉴</a>
+			<ul class="d2">
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="" class="d1">대메뉴</a>
+			<ul class="d2">
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+				<li><a href="">소메뉴</a></li>
+			</ul>
+		</li>
+	</ul>
+    <div class="bg"></div>
+</header>
+</body>
+</html>

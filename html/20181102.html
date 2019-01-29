@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body,ul,li{ margin:0; padding:0}
+input{ background-color:white; border:none}
+span,strong,input{ display:inline-block; vertical-align:middle}
+ul,li{ list-style:none}
+
+#loginBox{ background-color:#ccc; text-align:center; height:100vh}
+#loginBox ul{ display:inline-block; padding-top:100px}
+#loginBox ul li{ padding:10px 0}
+#loginBox ul li input{ width:460px; line-height:40px}
+#loginBox ul .loginId{}
+#loginBox ul .loginPw{}
+#loginBox ul .loginBtn{}
+
+input[name="mb_id"],
+input[name="mb_pw"]{ border:1px solid #333; text-indent:15px; color:#333;}
+input[type="submit"]{ margin-top:15px; background-color:red; color:white; cursor:pointer;}
+#loginBox ul li input:focus{ background-color:yellow}
+#loginBox ul li input:focus + span:after{ content:"네자리이상입력해주세요"}
+</style>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+  $(function(e) {
+    
+});
+  </script>
+</head>
+
+<body>
+<div id="loginBox">
+	<form name="login">
+		<ul>
+			<li class="loginId"><input type="text" name="mb_id"><span></span></li>
+			<li class="loginPw"><input type="password" name="mb_pw"><span></span></li>
+			<li class="loginBtn"><input type="submit" value="로그인"></li><!--submit 은 연동할일이 없어서 name은 필요없기때문에 넣지않는다, form태그 하나에는 하나의 submit만 들어갈수있다 복수 X-->
+		</ul>
+	</form>
+</div>
+</body>
+</html>

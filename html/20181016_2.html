@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet"  href="http://auddbs7898.cafe24.com/study/css/20181016_2.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<style>
+body{ margin:0; padding:0}
+
+</style>
+<script
+              src="https://code.jquery.com/jquery-2.2.4.min.js"
+              integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+              crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+
+<body>
+
+<!-- Set up your HTML --> 
+<div class="owl-carousel"> 
+  <div><img src="https://image.skmagic.com/skmagic/image/disp_bnr/1014/1535708266587115.png"></div>
+  <div><img src="https://image.skmagic.com/skmagic/image/disp_bnr/1014/1535708266587115.png"></div>
+  <div><img src="https://image.skmagic.com/skmagic/image/disp_bnr/1014/1535708266587115.png"></div>
+  <div><img src="https://image.skmagic.com/skmagic/image/disp_bnr/1014/1535708266587115.png"></div>
+  <div><img src="https://image.skmagic.com/skmagic/image/disp_bnr/1014/1535708266587115.png"></div> 
+ 
+</div>
+<script>
+$(document).ready(function(){ 
+    $('.owl-carousel').owlCarousel({
+         items:2, 
+         itemsDesktop : [1199,4],
+         itemsDesktopSmall : [980,3],
+         itemsTablet: [768,2],
+         itemsTabletSmall: false,
+         itemsMobile : [479,1],
+         singleItem : false,
+         loop:true,
+         autoplay: true,
+          autoplayTimeout: 3000,
+    /*  margin:10,*/ 
+        responsiveClass:true, //반응형때문에
+        //Pagination
+    pagination : true,//페이지버튼
+    paginationNumbers: true,
+        responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        1200:{
+            items:2,
+            nav:true
+        }
+        
+    }  
+    
+    })
+ });
+</script>
+</body>
+</html>

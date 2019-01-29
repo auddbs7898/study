@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>for 구문 수업</title>
+<link rel="stylesheet" href="/study/css/sincommon.css" type="text/css">
+<script
+  src="https://code.jquery.com/jquery-2.0.0.min.js"
+  integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw="
+  crossorigin="anonymous"></script>
+  <script>
+ $(function(){
+	 var listLi = new Array();//변수의 타입선언 정렬
+	     listLi[0] = "네이버";
+		 listLi[1] = "다음";
+		 listLi[2] = "구글";
+	 var listtag = ""; //출력태그용 변수만들기 
+	 var count = listLi.length;
+	 
+	 for(var i=0; i<listLi.length; i++){
+		 
+		 listtag += "<li><span>"+count+"</span><span class='subject'>"+listLi[i]+"</span></li>";//데이터를 호출할때 사용하는 문법
+	     count --; 
+	  }  
+  $('#list_in').append(listtag);
+ });
+  </script>
+</head>
+
+<body>
+  <dl id="list">
+   <dt><span class="no">번호</span><span class="subject">제목</span></dt>
+      <dd>
+         <ul id="list_in">
+     
+         </ul>  
+      </dd>
+   </dl>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>포커스가 들어간 슬라이딩</title>
+<style>
+body, ul, li, div, p{ margin:0; padding:0}
+button{ display:inline-block; background-color:transparent; border:none}
+ul, li{ list-style:none}
+.rel{ position:relative}
+.abs{ position:absolute}
+.fl{ float:left}
+.ofh{ overflow:hidden}
+#focusWrap{ background-color:#ccc; padding:15px;  margin:0 auto; }
+#focusSlider{}
+#focusSlider  ul{ width:10000px;  }
+#focusSlider  ul li{ }
+#focusSlider  ul li a{ display:block; transform:scale(1); font-size:22px; transition:transform 0.5s;  }
+#focusSlider  ul li a img{width:80%; margin:0 auto}
+#focusSlider  ul li:nth-child(3) a{ transform:scale(1.2) }
+#focusSlider  button{ display:block; top:50%; transform:translateY(-50%); font-size:20px; line-height:20px; }
+#focusSlider  button.prev:after{ content:"<" }
+#focusSlider  button.next:after{ content:">" }
+#focusSlider  button.prev{ left:0}
+#focusSlider  button.next{ right:0}
+
+</style>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script>
+    $(function(){        
+    var slideDefaultNum = 3; 
+    var sliderMother = "#focusSlider";
+	var dir = "-=";
+    
+      sliderLiW(slideDefaultNum,sliderMother); //실행문은 이벤트에 따라 
+    var sliderW =$("#focusSlider li").width();
+      sliderPos(sliderW);
+	  var autoslider = setInterval(function(){
+      ulslider(dir,sliderW)
+	  },3000)
+	   
+      $(window).resize(function(e) {
+         sliderLiW(slideDefaultNum, sliderMother);
+         sliderW =$("#focusSlider li").width();
+           sliderPos(sliderW);
+      });    
+	  
+	  $("#focusSlider").on("click","button",function(){
+		  clearInterval(autoslider);
+		  if($(this).hasClass('next')){
+			  dir = "-=";
+			}else{
+			  dir = "+=";
+			}
+			ulslider(dir,sliderW)
+		  })
+	  
+        function sliderLiW(showLiNum, _liM){
+            var _liW = $(_liM).innerWidth() / showLiNum;
+            $("#focusSlider li").width(_liW);
+        }
+        
+        function sliderPos(a){
+            $("#focusSlider ul").css({"margin-left":-a});
+        }    
+        
+		
+		 function ulslider(a,b){
+		$("#focusSlider ul").stop(true,true).animate({"marginLeft":a+b},400,function(){//stop은 버튼을 눌렀을때 애니메이션을 중지
+			if(a == "-="){
+		$("#focusSlider ul li").eq(0).appendTo($("#focusSlider ul"));
+			}else{
+		$("#focusSlider ul li").eq(-1).prependTo($("#focusSlider ul"));
+			}
+			$("#focusSlider ul").css("margin-left",-b);
+		});
+		 }
+        });
+</script>
+</head>
+
+<body>
+<div id="focusWrap">
+    <div id="focusSlider" class="ofh rel">
+        <ul class="ofh">
+            <li class="fl"><a href=""><img src="http://wooju75.cafe24.com/img/logo.svg" alt="제목제목1"></a></li>
+            <li class="fl"><a href=""><img src="http://wooju75.cafe24.com/img/logo.svg" alt="제목제목2"></a></li>
+            <li class="fl"><a href=""><img src="http://wooju75.cafe24.com/img/logo.svg" alt="제목제목3"></a></li>
+            <li class="fl"><a href=""><img src="http://wooju75.cafe24.com/img/logo.svg" alt="제목제목4"></a></li>
+            <li class="fl"><a href=""><img src="http://wooju75.cafe24.com/img/logo.svg" alt="제목제목5"></a></li>
+        </ul>
+        <button class="abs prev"></button>
+        <button class="abs next"></button>
+    </div>
+</div>
+</body>
+</html>

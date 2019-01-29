@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>20180913 동욱메뉴 수업</title>
+<link rel="stylesheet" href="happy/css/common.css" type="text/css">
+<style>
+/*퀵*/
+#navi{ position:fixed; right:0; top:50%; transform:translateY(-50%)}
+#navi li{ }
+#navi :after{ content:""; display: inline-block; vertical-align:middle;transition:0.5s}
+
+#navi li a{ display:inline-block; color:transparent; padding:10px; transition:0.5s}
+#navi li.on a{ color:black}
+#navi li:hover a{ color:black}
+
+#navi li:after{ width:40px; height:1px; background-color: transparent; margin-left:-11px} 
+#navi li.on:after{ background-color:red}
+
+#navi li a:after{ width:15px; height:15px; border-radius:50%; border:1px solid black; margin-right:-1px; margin-left:10px}
+#navi li.on a:after{ border:1px solid red;}
+/*공통*/
+.container{}
+.container >section{ height:100vh; font-size:50px; text-align:center}        
+/*섹션*/
+.container #about{}
+.container #profile{}
+.container #gallery{}
+</style>
+<script
+  src="https://code.jquery.com/jquery-2.0.0.min.js"
+  integrity="sha256-1IKHGl6UjLSIT6CXLqmKgavKBXtr0/jJlaGMEkh+dhw="
+  crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(e) {//화면이 열리면
+     $("#navi li").click(function(e) {//li를 클릭하면
+		  $("#navi li").removeClass();//모든 li 에있는 클래스는 다 없애라
+        $(this).addClass("on");//클릭당한 li만 클래스'on'을 추가한다
+		
+    });
+});
+  </script>
+</head>
+
+<body>
+<ul id="navi">
+	<li><a href="#about">about</a></li>
+	<li><a href="#profile">profile</a></li>
+	<li><a href="#gallery">gallery</a></li>
+</ul>
+<div class="container">
+	<section id="about">1</section>
+	<section id="profile">2</section>
+	<section id="gallery">3</section>
+</div></body>
+</html>

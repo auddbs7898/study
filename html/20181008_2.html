@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>메뉴만들기</title>
+<style>
+ul, li{ margin:0; padding:0; list-style:none}
+ul{ text-align:center; border:1px solid black; display:inline-block}
+ul li{ display:inline-block;  padding:5px 20px; border-left:1px solid black }
+ul li:first-child{ border-left-width:0}
+ul li.on a{ color:red; }
+</style>
+<script
+  src="https://code.jquery.com/jquery-1.9.0.min.js"
+  integrity="sha256-f6DVw/U4x2+HjgEqw5BZf67Kq/5vudRZuRkljnbF344="
+  crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(e) {
+ var linkText=["네이버","다음","구글"];
+ var linkHref=["http://www.naver.com","http://www.daum.net","http://www.google.com"];
+ var tag =""; 
+ for(var num in linkHref){
+ tag +="<li><a href='"+linkHref[num]+"'>"+linkText[num]+"</a></li>";
+ }
+      
+  $("ul").append(tag);
+    $('ul li').eq(2).addClass('on');
+  });
+  </script>
+</head>
+
+<body>
+ <ul></ul>
+</body>
+</html>

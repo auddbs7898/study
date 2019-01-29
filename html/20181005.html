@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>메뉴슬라이딩 수업</title>
+<link rel="stylesheet" href="/study/css/sincommon.css" type="text/css">
+<style>
+/*common*/
+.container{ max-width:1200px; margin:0 auto;}
+.wrap{ overflow-y:scroll}
+.sec{ min-height:800px; padding:30px 0; font-size:100px; text-align:center}
+/*navi*/
+#gnbWrap.scroll{ top:0}
+#gnbWrap div:after{ content:""; display:block; clear:both}
+#gnbWrap{ position:fixed; z-index:1000; width:100%; left:0; /*top:0;*/ top:calc(100% - 80px); height:80px; background-color:#8db;}
+#gnbWrap h1{ float:left; width:100px}
+#gnbWrap ul{ float:left; width:calc(100% - 100px)}
+#gnbWrap ul li{ float:left; width:25%}
+#gnbWrap ul li a.act{ background-color:red}
+#gnbWrap ul li a{}
+/*content*/
+#adsec{}
+contsec1{}
+contsec2{}
+contsec3{}
+</style>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+ $(document).ready(function(e) {
+	 var barTopStart = parseInt($("#gnbWrap").css('top'));
+   $(window).scroll(function(e) {
+	   if($(window).scrollTop() > barTopStart){
+    $("#gnbWrap").addClass("scroll");
+	   }
+	   else{
+	$("#gnbWrap").removeClass("scroll");	
+	   }
+  }); 
+  $("#gnbWrap h1 a").click(function(e) {
+    e.preventDefault() 
+	$('body,html').animate({scrollTop : 0},800,function(){
+	});
+ });
+  $("#gnbWrap li a").click(function(e) {
+   e.preventDefault()
+   var num = $(this).parent('li').index()
+   $('body,html').animate({scrollTop : $('#secWrap section').eq(num).offset().top},800,function(){})
+ });
+  $("#gnbWrap a").click(function(e) {
+    e.preventDefault() 
+    $("#gnbWrap a").removeClass('act');
+	$(this).addClass('act');
+  });
+});
+  </script>
+</head>
+
+<body>
+<div id="gnbWrap">
+	<div class="container">
+    
+		<h1>
+			<a href="https://www.google.co.kr/"><img src="http://auddbs7898.cafe24.com/study/img/medilogo.png"></a>
+		</h1>
+        
+            <ul>
+				<li><a href="">자기소개</a></li>
+				<li><a href="">자기소개</a></li>
+				<li><a href="">자기소개</a></li>
+				<li><a href="">자기소개</a></li>
+			</ul>
+		
+	</div>
+</div>
+<div class="wrap">
+	<section id="adsec" class="sec">애니메이션</section>
+	<section id="secWrap">
+		<section class="sec contsec1">1</section>
+		<section class="sec contsec2">2</section>
+		<section class="sec contsec3">3</section>
+        <section class="sec contsec4">4</section>
+	</section>
+</div></body>
+</html>

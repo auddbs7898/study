@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css로 애니메이션 수업</title>
+<link rel="stylesheet" href="/study/css/sincommon.css" type="text/css">
+<style>
+.sennTitle{ opacity:0; transform:translateX(50px); transition:opacity 1.0s, transform:1.0s;}
+.sennTitle.act{ opacity:1.0; transform:translateX(0px);}
+</style>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+  $(function() {
+	  setTimeout(function(){
+		  $(".sennTitle").addClass("act");
+		  },1000);
+    
+});
+  </script>
+</head>
+
+<body>
+<div class="sennTitle"></div>
+</body>
+</html>

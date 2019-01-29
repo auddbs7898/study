@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="/study/css/sincommon.css" type="text/css">
+<style>
+.banner{position:relative; overflow:hidden; width:1000px; margin:0 auto; overflow:hidden; border:1px solid black;
+background-color:#699}
+#ani{ width:1000000px; overflow:hidden}
+#ani li{float:left; width:1000px; height:300px}
+.banner .btnDiv{ position:absolute; top:50%; height:0; width:100%}
+.banner .btnDiv a{display:block; width:40px; height:40px; line-height:40px; background-color:#FC0; transform:translateY(-50%)}
+.banner .btnDiv .left{ float:left}
+.banner .btnDiv .right{ float:right}
+
+</style>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+  $(function(e){
+	var liw = $('#ani li').width();
+	var startPos =0;//ani의 시작위치
+	var lastPos = $('#ani li:last-child').index()*liw;//ani의 마지막위치 -3000
+	var aniPos = parseInt($('#ani').css('margin-left'));//ani의 위치값
+	
+	function posfun(){
+	if(aniPos<=startPos){
+		$('.left').css('display','none');
+		}else{
+		$('.left').css('display','block');
+			}
+	}
+	var autoAni=setInterval(function(){
+		aniRoll("-=");
+		},3000);
+		
+		
+		
+		$('btnDiv a').click(function(e) {
+            e.preventDefault();
+			clearInterval(autoAni);
+			if($(this).hasClass('right')){
+				aniRoll("-=")
+			}else{
+			    aniRoll("+=")
+			}
+        });
+	function aniRoll(dir){
+		$('#ani li').stop(true, true).animate({"marginLeft":dir+liw},400,function(){
+		});
+	}
+});
+  </script>
+</head>
+
+<body>
+ <div class="banner">
+	<ul id="ani">
+		<li><a href="">배너1</a></li>
+		<li><a href="">배너2</a></li>
+		<li><a href="">배너3</a></li>
+		<li><a href="">배너4</a></li>
+	</ul>
+	<div class="btnDiv">
+    <a href="" class="left">prev</a>
+    <a href="" class="right">next</a>
+    </div>
+ </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body, header, ul, li, div, h1{ margin:0; padding:0}
+ul, li{ list-style:none}
+a{ color:black ; text-decoration:none}
+
+/*공통클래스*/
+.blind{ display:none !important}
+
+
+#hd{ text-align:center}
+#hd a{ display:inline-block; *display:block; zoom:1}
+/*.top1*/
+#hd   .top1{ position:relative; padding:25px 0}
+#hd   .top1   h1{ text-align:center} 
+#hd   .top1   h1   a   img{}
+
+#hd   .top1  #util { position:absolute; top:50%; transform:translateY(-50%); left:50%;
+ margin-left:200px}
+#hd   .top1  #util:after{ content:""; display:block; clear:both}
+#hd   .top1  #util   li { float:left; position:relative; height:13px }
+#hd   .top1  #util   li:after{ content: url(https://www.yegaramsb.co.kr/resources/normal/images/common/img_gnb_on.png);  width:8px; height:13px; position:absolute; top:50%; right:0; transform:translate(50%,-50%)}
+#hd   .top1  #util   li    a{ padding:0 10px; font-size:13px; display:block; line-height:100%}
+
+
+/*네비*/
+#gnb{ display:inline-block; position:relative; z-index:10}
+#gnb   li {}
+/*대메뉴*/
+#gnb:after{ content:""; display:block; clear:both}
+#gnb  > li{ position:relative; float:left}
+#gnb  a.d1{ padding:0 25px; line-height:180%}
+#gnb  li:hover  a.d1{ color:#F30; }
+#gnb  li  a.d1:after{ content:""; display:block; width:0; height:3px; background-color:#F30; margin:0 auto; transition:0.5s }
+#gnb  li:hover  a.d1:after{ width:100%; }
+/*소메뉴*/
+#gnb   ul.d2{ position:absolute; width:100%; height:0px; overflow:hidden; transition:0.5s; }
+#gnb:hover   ul.d2{ height:150px}
+#gnb   ul.d2  li{ }
+#gnb   ul.d2  a{ color:white}
+#hd .bg{ position:absolute; width:100%;background-color:rgba(255,51,0,1); transition:0.5s;   margin-top:-4px; height:0}
+#gnb:hover + .bg{ height:150px; }
+</style>
+</head>
+
+<body>
+<header id="hd">
+ <div class="top1">
+  <h1><a href=""><img src="https://www.happybath.com/content/dam/happybath/images/common/img-logo.png" alt=""></a></h1>
+  <ul id="util">
+   <li><a href="">로그인</a><a href="" class="blind">로그아웃</a></li>
+   <li><a href="">마이페이지</a></li>
+   <li><a href="">구매하기</a></li>
+   <li><a href="">매장찾기</a></li>
+   <li><a href=""><img src="https://www.happybath.com/content/dam/happybath/images/common/bg-header-searchbtn.png" width="20"></a></li>
+  </ul>
+ </div>
+ <ul id="gnb">
+  <li>
+   <a href="" class="d1">해피바스 이야기</a>
+   <ul class="d2">
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+   </ul>
+  </li>
+  <li>
+   <a href="" class="d1">해피바스 선물</a>
+   <ul class="d2">
+    <li><a href="">브랜드 히스토리</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+   </ul>
+  </li>
+  <li>
+   <a href="" class="d1">해피바스 뷰티톡</a>
+   <ul class="d2">
+    <li><a href="">이벤트</a></li>
+    <li><a href="">해피그리너</a></li>
+   </ul>
+  </li>
+  <li>
+   <a href="" class="d1">해피바스 제품</a>
+   <ul class="d2">
+    <li><a href="">페이스북</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+   </ul>
+  </li>
+  <li>
+   <a href="" class="d1">해피바스 함께하기</a>
+   <ul class="d2">
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+    <li><a href="">소메뉴</a></li>
+   </ul>
+  </li>
+ </ul>
+    <div class="bg"></div>
+</header>
+<section>
+  <h2>제가 보이나요?????</h2>
+</section>
+</body>
+</html>

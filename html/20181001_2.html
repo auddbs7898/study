@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>신일 faq가져오기</title>
+<link rel="stylesheet" href="/happy/css/common.css" type="text/css">
+<style>
+.blind{position:absolute; top:-5000em; width:0; height:0; overflow:hidden; line-height:0; font-size:0;}
+.selType02{height:31px; box-sizing:border-box; line-height:26px; border:0px solid #ddd;border-width:0; border-width:0; padding:0 0 0 10px;}
+.textAreaType01{box-sizing:border-box; border:0px solid #ddd;border-width:0; padding:10px;border-width:0;}
+.tar{ text-align:right;}
+.tac{ text-align:center;}
+.clfix:after {content: "."; display: block; height: 0px; clear: both; visibility: hidden}
+.clfix {display: inline-block}
+.clfix {display: block}
+.cl{clear:left;}
+.fl{float:left !important;}
+.fr{float:right !important;}
+.vm{vertical-align:middle !important}
+.al{text-align:left !important}
+.ac{text-align:center !important}
+.ar{text-align:right !important}
+.ls1{letter-spacing:-1px !important}
+.lsd5{letter-spacing:-0.5px !important}
+.rel{position:relative;}
+
+/* Margin */
+.mr10{margin-right:10px !important;}
+.mr20{margin-right:20px !important;}
+.mr50{margin-right:50px !important;}
+.ml0{margin-left:0 !important;}
+.ml10{margin-left:10px !important;}
+.ml20{margin-left:20px !important;}
+.ml30{margin-left:30px !important;}
+.ml50{margin-left:50px !important;}
+.mt0{margin-top:0 !important;}
+.mt5{margin-top:5px !important;}
+.mt10{margin-top:10px !important;}
+.mt15{margin-top:15px !important;}
+.mt20{margin-top:20px !important;}
+.mt25{margin-top:25px !important;}
+.mt30{margin-top:30px !important;}
+.mt35{margin-top:35px !important;}
+.mt40{margin-top:40px !important;}
+.mt50{margin-top:50px !important;}
+.mt55{margin-top:55px !important;}
+.mt60{margin-top:60px !important;}
+.mt70{margin-top:70px !important;}
+.mb0{margin-bottom:0px !important;}
+.mb10{margin-bottom:10px !important;}
+.mb20{margin-bottom:20px !important;}
+.mb30{margin-bottom:30px !important;}
+.mb40{margin-bottom:40px !important;}
+.mb125{margin-bottom:125px !important;}
+
+/* Padding */
+.p0{padding:0 !important;}
+.pl0{padding-left:0 !important;}
+.pl20{padding-left:20px !important;}
+.pl30{padding-left:30px !important;}
+.pl40{padding-left:40px !important;}
+.pr0{padding-right:0 !important;}
+.pr20{padding-right:20px !important;}
+.pt0{padding-top:0 !important;}
+.pt10{padding-top:10px !important;}
+.pt12{padding-top:12px !important;}
+.pt15{padding-top:15px !important;}
+.pt20{padding-top:20px !important;}
+.pt30{padding-top:30px !important;}
+.pt40{padding-top:40px !important;}
+.pt50{padding-top:50px !important;}
+.pt60{padding-top:60px !important;}
+.pt70{padding-top:70px !important;}
+.pl35{padding-left:35px !important;}
+.pl50{padding-left:50px !important;}
+.pb0{padding-bottom:0 !important;}
+.pb20{padding-bottom:20px !important;}
+.pb50{padding-bottom:50px !important;}
+.pb60{padding-bottom:60px !important;}
+.pb80{padding-bottom:80px !important;}
+
+/*font style*/
+.fz12{ font-size:12px;}
+.fz18{ font-size:18px;}
+.subTits{font-size:20px; color:#000;}
+
+
+/*font color*/
+.f_yellow{ color: #ffd954;}
+.f_green{ color: #008547;}
+.f_red{ color: #ff0000;}
+.f14{ font-size:14px !important;}
+.f_b{font-weight:bold !important;}
+.fwb{font-weight:bold !important;}
+.fwn{font-weight:normal !important;}
+.bgNone{background:none !important;}
+.c252525{color:#252525 !important;}
+
+/* bg */
+.bdb_none{border-bottom: none !important;}
+.hide_txt {text-indent:-9999px;position:absolute;top:0;left:0;margin:0 !important;padding:0 !important;font-size:0;line-height:0;border:0 !important;overflow:hidden !important}
+.por{position:relative;}
+
+/*skip_navigation*/
+.skip_navigation, .skip_navigation ul {height:0; position:absolute;z-index:200;left:0px;top:0px;width:100%;}
+.skip_navigation a{position:absolute; top:-9999px; background:#000; width:100%; padding:20px 0 ; text-align: center; color: #fff; font-weight: bold; z-index: 100; font-size:16px; opacity: 1; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); }
+.skip_navigation a:focus,
+.skip_navigation a:hover,
+.skip_navigation a:active{top:0;}
+body,html{height:100%}
+.clfix:after {content: "."; display: block; height: 0px; clear: both; visibility: hidden}
+.clfix {display: inline-block}
+.clfix {display: block}
+* html .clfix {height: 1%} /* Hides from IE-mac */
+.clfix {zoom: 1} /*for IE 5.5-7*/
+
+
+/* layout */
+.contentWrap{ background: #f9f9f9; padding:0 10px 70px; max-width:1100px; margin:0 auto; line-height:1.6;}
+.contentWrap.wide{max-width:100%; width:100%; box-sizing:border-box;}
+.contentWrap.bgfff{background: #fff;}
+.contentWrap.last{padding-bottom:130px;text-shadow: 0 0 black;}
+.contentWrap .contentInner{padding-top:46px;}
+.contentArea .secCont{padding:60px 0;}
+.contentArea .secCont.last{padding-bottom:70px;}
+.faqContent .faqTx{text-align: center; font-size:1.6rem; color:#454545; font-weight:bold;}
+.faq-wrap{ word-break: break-all; margin-top:35px;}
+.faq-wrap dt{ background:#fafafa url(http://www.shinil.co.kr/ko/front/image/customer/bg_line.gif) repeat-y 90% 0;  border:1px solid #e5e5e5;border-top:none;border-width:0;}
+.faq-wrap dt:first-child{border-top:1px solid #db1d27;}
+.faq-wrap dt a{ display: block; padding:14px 80px 14px 100px; font-size:13px; color:#636363; background: url(http://www.shinil.co.kr/ko/front/image/customer/icn_open.png) no-repeat 96% 50%; font-size:1.4rem; color:#454545; position:relative; font-weight:bold;}
+.faq-wrap dt a:before{content:"Q"; display:inline-block; position:absolute; left:36px; top:14px; font-weight:bold;}
+.faq-wrap dt a:after{content:""; display:block; width:1px; height:100%; position:absolute; left:79px; top:0;}
+.faq-wrap dt.active a{ background: url(http://www.shinil.co.kr/ko/front/image/customer/icn_close.png) no-repeat 96% 50%;}
+.faq-wrap dd{ border:1px solid #e5e5e5;border-width:0; border-top:none; line-height: 18px; font-size:1.4rem;color:#454545; position:relative; height:0; 
+overflow:hidden; transition:0.5s}
+.faq-wrap dd:before{content:"A"; display:inline-block; position:absolute; left:36px; top:50%; margin-top:-9px; font-weight:bold;}
+.faq-wrap dt.active + dd{ height:100px; }
+.faq-wrap dd:after{content:""; display:block; width:1px; height:100%; position:absolute; left:79px; top:0;}
+.faq-wrap dd div{  padding: 26px 30px 26px 100px; color:#6b6b6b; position:relative;}
+</style>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="/study/js/20181001_2.js"></script>
+</head>
+
+<body>
+<div class="contentWrap bgfff last">
+			
+				<div class="contentInner">
+					<div class="faqContent">
+						
+						<dl class="faq-wrap">
+							
+								<dt>
+									<strong class="blind">질문</strong>
+									<a title="답변 열기" href="#none" class="">
+										<span>
+											AS 센터의 근무시간
+										</span>
+									</a>
+								</dt>
+								<dd>
+									<strong class="blind">답변</strong>
+									<div>
+										월~금요일 오전9시~오후6시<br>
+<br>
+토요일,일요일,공휴일 휴무
+									</div>
+								</dd>
+								
+								<dt>
+									<strong class="blind">질문</strong>
+									<a title="답변 열기" href="#none" class="">
+										<span>
+											제품 대량구매, 본사 담당자 문의
+										</span>
+									</a>
+								</dt>
+								<dd>
+									<strong class="blind">답변</strong>
+									<div>
+										대량구매 담당 070-4814-2276 안내<br>
+<br>
+신일몰, 평일 9:00~17:00 업무<br>
+
+									</div>
+								</dd>
+								
+						</dl>
+						<!-- 페이징 -->
+						<div class="paging">
+
+</div>
+						<!-- 페이징 -->
+					</div>
+				</div>
+			</div>
+</body>
+</html>

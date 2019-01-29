@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link rel="stylesheet" href="/happy/css/common.css" type="text/css">
+<style>
+.tabWrap{ width:1000px; margin:0 auto; height:300px; overflow:hidden; border:1px solid black; position:relative;}
+#tab{ position:absolute; z-index:10; display:inline-block; bottom:5px; left:50%; transform:translateX(-50%)}
+#tab li{ float:left; padding:5px 10px; border-top:1px solid black}
+#tab li.on{ color:red; border-top-color:red}
+#tab li:not(.on){ cursor:pointer}
+/*내용*/
+#tabCon li{ display:none}
+#tabCon li.on{ display: block}
+
+</style>
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="/happy/js/yeeun.js"></script>
+</head>
+
+<body>		
+<div class="tabWrap">				
+  <ul id="tab">
+	<li class="on">sk매직몰 탭1</li>
+	<li>sk매직몰 탭2</li>
+	<li>sk매직몰 탭3</li>
+	<li>sk매직몰 탭4</li>
+  </ul>
+  <ul id="tabCon">
+  <li class="on">tab1의 내용이 노출됩니다</li>
+  <li>tab2의 내용이 노출됩니다</li>
+  <li>tab3의 내용이 노출됩니다</li>
+  <li>tab4의 내용이 노출됩니다</li>
+  </ul>
+  </div>
+</body>
+</html>

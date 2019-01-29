@@ -1,0 +1,122 @@
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script>
+   $(function(e) {
+	   var myWrap = "<div class='dbWrap'></div>"//브랜드데이터 전체봉지
+	   var len = $("tr").length;//데이터의 갯수
+    $("table").after(myWrap);//데이터 노출
+	for(var i=0; i<len; i++){//데이터 갯수 만큼 처리
+	$(".dbWrap").append('<?xml version="1.0" encoding="utf-8"?><dataWrap></dataWrap>');
+	} 01
+	$("tr").each(function(index, element) {
+        var trdata = index;//각각 tr 순번을 저장
+	$(" > td",this).each(function(index, element) {
+      /*  var data = $(this).html();
+		$("dataWrap").eq(trdata).append("<data"+index+">"+data+"</data"+index+">");*/
+    });////tr each 
+	  });////td each
+  }); 
+  </script>
+
+<table cellspacing="0" cellpadding="0">
+  <col width="36">
+  <col width="81">
+  <col width="63">
+  <col width="118" span="2">
+  <col width="72">
+  <col width="72">
+  <col width="118">
+  <col width="175">
+  <col width="203">
+  <col width="238">
+  <col width="111">
+  <col width="72">
+  <col width="72">
+  <col width="533">
+  <tr>
+    <td width="36">1</td>
+    <td width="81">2018.06.27</td>
+    <td width="63">317호</td>
+    <td width="118">반달펫</td>
+    <td width="118">BANDAL.Pet</td>
+    <td width="72">김진이</td>
+    <td width="72">　</td>
+    <td width="118">02-6338-8809</td>
+    <td width="175">bandal-co@naver.com</td>
+    <td width="203">bandalpet.com</td>
+    <td width="238">instagram.com/bandalpet</td>
+    <td width="111">목재,섬유,금속</td>
+    <td width="72">반려동물</td>
+    <td width="72">3</td>
+    <td width="533">&lsquo;반려동물과의 달콤한    일상&rsquo;을 꿈꾸다.<br>
+      <br>
+      반달펫(BANDAL.Pet)은, &lsquo;반&rsquo;려동물과의 &lsquo;달&rsquo;콤한 일상을 꿈꾸는 모든 이들, 그리고 그의 가족과 다름없는    &lsquo;펫Pet(반려동물)&rsquo;을 위하여 가구를 비롯한 아름답고 실용적인 용품을 만들겠다는 의지로부터 탄생하였습니다.<br>
+      오랜 시간 우리의 곁에서 가족이 되어준 반려동물과 인간이 함께 사용하는 물건은 생활 속에 자연스레 녹아드는 디자인이어야    합니다.<br>
+      반달펫의 디자인은 단순히 외적인 아름다움만을 강조하는 디자인이 아니라, 사용의 편리성과 견고함, 관리의 수월함 등을 고려한 체계적인    설계가 뒷받침됩니다.<br>
+      빛나는 노력과 정성으로 빚어진 우리의 제품들이 그리 길지 않은 그들의 일생과 함께 할 '가치'있는 선물이 되었으면 합니다.<br>
+    </td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>2018.07.10</td>
+    <td>318호</td>
+    <td>본리빙</td>
+    <td>Vonliving</td>
+    <td>강정은</td>
+    <td>　</td>
+    <td>010-4167-3477</td>
+    <td>info.vonliving@gmail.com</td>
+    <td>www.vonliving.com</td>
+    <td width="238">instagram.com/vonliving_/<br>
+      https://www.facebook.com/Vonliving-119054628958459/</td>
+    <td>섬유,유리,플라스틱</td>
+    <td width="72">생활소품</td>
+    <td>5</td>
+    <td width="533">Vonliving은 <br>
+      아름다운 우리 문화유산을 일상에서 친숙하게 사용하는 제품으로 재조명하여,     사람들이 일상에서 자연스럽게 한국의 전통요소를 느끼고     널리 알려지길 바라며 만들어졌습니다. 우리의  제품들이    놓이는 공간마다 한국의 아름다움을 경험하길 기대합니다.<br>
+      Our creative works intends to shed new light on the beautiful Korean    cultural heritage from the perspective of the designer, thus interpreting    them as goods for use in daily life.     We hope that our  all creative    works  display the beauty of Korean    wherever they are placed.<br>
+      <br>
+      '전통'을 '캐주얼'하게  슬로건 아래  <br>
+      우리나라 전통을  쉽게 다가가고, 일상생활에서 친숙하게 사용 가능한    '실용성 있는 제품'을 만들기 위해 노력합니다.</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>2018.07.13</td>
+    <td>304호</td>
+    <td>준주얼리</td>
+    <td>Jun Jewellery</td>
+    <td>윤준희</td>
+    <td>　</td>
+    <td>010-5487-5321</td>
+    <td>junheeyoon@naver.com</td>
+    <td>　</td>
+    <td>　</td>
+    <td>금속</td>
+    <td width="72">장신구,    생활소품</td>
+    <td>4</td>
+    <td width="533">실버    및 동을 사용해서 만드는 수공예 주얼리 및 인테리어 소품 제작.<br>
+      수공예 주얼리는 직접 디자인을 한 후, 실버와 원석을 사용해서 제작.<br>
+      인테리어 소품은 황동, 적동, 백동을 사용해서 촛대, 장식품, 꽃병 등을 제작. </td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>2018.07.13</td>
+    <td>412호</td>
+    <td>지니아</td>
+    <td>　</td>
+    <td>진준미</td>
+    <td>　</td>
+    <td>010-3344-1489</td>
+    <td>eoe7706@naver.com</td>
+    <td>　</td>
+    <td>　</td>
+    <td>금속</td>
+    <td width="72">장신구</td>
+    <td>3</td>
+    <td width="533">　</td>
+  </tr>
+</table>
+
+

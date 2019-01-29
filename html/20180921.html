@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>20180921 폼태그 수업</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.js">
+</script> 
+<style>
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+body,ul,li,div,p,h2,h3,h4,h5{ margin:0; padding:0;
+font-family: 'Nanum Gothic', sans-serif;line-height:100%; font-size:100%}
+ul,li{ list-style:none}
+input,select,textarea{ outline:none}/*파란테두리 없애기 크롬에서만 나타남*/
+a,input,span,select,label{ display:inline-block; vertical-align:middle; margin:0; padding:0; }
+form{ display:block; margin:0; padding:0}
+input{ border:none}
+.sec{ background-color:#8bad61; padding:30px 0; text-align:center;}/*center를 줬으면 inline도 넣어줘야함*/
+#formDiv{ display:inline-block}/*너비없이 가운데정렬(후손크기맞춤->후손은 고정픽셀이 있어야함 %는 불가함)*/
+#formDiv h3{ font-weight:normal; font-size:30px; line-heigh	t:30px}
+#formDiv h3 span{ font-weight:bold; vertical-align:top;/*컨텐츠와 태그가 같이있을때는 middle은 사용하면 안됀다 태그와 태그끼리만 사용가능*/}
+
+#formDiv ul{ text-align:left; max-width:600px; margin:0 auto}
+#formDiv ul:after{ content:""; display:block; clear:both}
+#formDiv ul li{ padding-bottom:15px; float:left	; width:100%}/*공통으로 width값이 들어갔기때문에 맨위에 위치해야한다*/	
+#formDiv ul li.w50{ width:50%}
+
+#formDiv ul li h5{ font-size:18px; line-height:180%}
+
+#formDiv input{}
+#formDiv input[type='text']{line-height:30px; height:30px; border:1px solid black; text-indent:10px; width:280px;
+background-repeat:no-repeat; background-position:10px center}
+#formDiv input[type='submit']{}
+#formDiv input[type='checkbox']{}
+#formDiv input[type='radio']{}/*공통클래스는 맨위로 올리고 세부스타일은 아래에 위치하도록 해야지 먹힌다*/
+
+#formDiv select{ line-height:30px; border:1px solid black; height:30px; padding-left:10px; width:280px}
+#formDiv select[name="sel1"]{ width:480px}/*앞에 #formDiv을 사용해줘야 우선순위로 먼저 들어간다 안쓰면 35번쨋줄이 먼저 들어간다 */
+
+#formDiv input[name='name']{}
+#formDiv input[name='tel']{}
+
+#formDiv textarea{ width:100%;}
+#formDiv input[type='checkbox'][id^='ck']{ display:none}
+#formDiv label[for^='ck']{ margin-right:10px}
+#formDiv label[for^='ck']:before{ content:""; display: inline-block; margin-right:2px; width:10px;
+height:10px; border:1px solid black;}
+#formDiv input[type='checkbox'][id^='ck']:checked + label:before{ background-color:black}
+</style>
+</head>
+
+<body>
+<section class="sec">
+	<div id="formDiv">
+		<h3><span>어떤</span>서비스가, <span>어떻게</span> 필요하신가요?</h3>
+        <form>
+         <ul>
+         	<li>
+         		<h5>타이틀제목자리</h5>
+         		<select name="sel1" id="">
+         			<option value="">선택해주세요[필수]</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option></select>
+         	</li>
+         	<li class="w50">
+         		<h5>타이틀제목자리</h5>
+         		<select name="sel2" id="">
+         			<option value="">선택해주세요[필수]</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option></select>
+         	</li>
+         	<li class="w50">
+         		<h5>타이틀제목자리</h5>
+         		<select name="sel3" id="">
+         			<option value="">선택해주세요[필수]</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option></select>
+         	</li>
+         	<li class="w50">
+         		<h5>타이틀제목자리</h5>
+         		<select name="sel4" id="">
+         			<option value="">선택해주세요[필수]</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option></select>
+         	</li>
+         	<li class="w50">
+         		<h5>타이틀제목자리</h5>
+         		<select name="sel5" id="">
+         			<option value="">선택해주세요[필수]</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option>
+         			<option value="">값들</option></select>
+         	</li>
+         	<li class="w50">
+         		<h5>타이틀제목자리</h5>
+         		<input type="text" name="name" required>
+         	</li>
+         	<li class="w50">
+         		<h5>타이틀제목자리</h5>
+         		<input type="text" name="tel" required>
+         	</li>
+            <li>
+         		<h5>타이틀제목자리</h5>
+         		<textarea rows="5"></textarea>
+         	</li>
+             <li>
+         		<p>약관타이틀</p>
+                <div>
+                    <input type="checkbox" id="ck1">
+                    <label for="ck1">내용</label>
+                    <input type="checkbox" id="ck2">
+                    <label for="ck2">내용</label>
+                    <input type="checkbox" id="ck3">
+                    <label for="ck3">내용</label>
+                    <input type="checkbox" id="ck4">
+                    <label for="ck4">내용</label>
+                    <input type="checkbox" id="ck5">
+                    <label for="ck5">내용</label>
+                    <input type="checkbox" id="ck6">
+                    <label for="ck6">내용</label>              
+                </div>
+         	</li>
+         </ul>
+         </form>
+	</div>
+</section></body>
+</html>

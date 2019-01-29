@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>슬라이드 애니메이션을 위한 지식수업</title>
+<link href="/study/css/sincommon.css" rel="stylesheet" type="text/css">
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous">
+  </script>
+<script>
+$(document).ready(function(e) {
+ $(window).scroll(function(e) {
+  if($(window).scrollTop() > 0){
+      $("#hd").addClass("scroll");
+   }else{	
+      $("#hd").removeClass("scroll") ;
+   }
+  });
+});
+</script>
+
+</head>
+
+<body>
+  <header id="hd" >
+ 
+  <div id="wrap_gnb">
+    <!-- logo -->
+    <h1><a href="http://www.hanbit.co.kr/index.html">한빛출판네트워크</a></h1>
+    <!-- //logo -->
+
+    <!-- Menu -->
+    <div id="gnb" name="gnb">
+      <ul>
+        <li><a href="http://www.hanbit.co.kr/brand/brand_submain.html" class="">BRAND</a></li>
+        <li><a href="http://www.hanbit.co.kr/channel/channel_submain.html" class="">Channel.H</a></li>
+        <li><a href="http://www.hanbit.co.kr/store/store_submain.html" class="">STORE</a></li>
+        <li><a href="http://www.hanbit.co.kr/support/help_info.html" class="">SUPPORT</a></li>
+        <li><a href="http://www.hanbit.co.kr/event/current/current_event_list.html" class="">EVENT</a></li>
+        
+        <li id="top_search" class="search"><a href="javascript:;" ><span>SERACH</span></a></li>
+      </ul>
+    </div>
+    <!-- //Menu -->
+  </div>
+</header>
+<section id="content">
+</section>
+</body>
+</html>

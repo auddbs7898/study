@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>컨텐츠 크기가 다를때 수직정렬하기</title>
+</head>
+<style>
+body,ul,li{ padding:0; margin:0}
+.container{ max-width:1200px; margin:0 auto}
+.container ul{ display:table; width:100%; background-color:#ccc;}
+.container ul li{ display:table-cell; vertical-align:middle; text-align:center; min-width:220px}
+@media(max-width:1000px){
+.container ul{ display:block}
+.container ul li{ display:block}
+	}
+</style>
+<body>
+<div class="container">
+	<ul>
+		<li>컨텐츠<br>컨텐츠<br>컨텐츠</li>
+		<li>컨텐츠</li>
+		<li>컨텐츠</li>
+	</ul>
+</div></body>
+</html>

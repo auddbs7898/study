@@ -1,0 +1,855 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>고려개발 예쁜거 빼오기</title>
+<style>
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+html {line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+
+article, aside, footer, header, nav, section {display:block}
+
+h1 {font-size:2em;margin:0.67em 0}
+
+figcaption, figure, main {display:block}
+
+figure {margin:1em 40px}
+
+hr {box-sizing:content-box;height:0;overflow:visible}
+
+pre {font-family:monospace, monospace;font-size:1em}
+
+a {background-color:transparent;-webkit-text-decoration-skip:objects}
+
+abbr[title] {border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+
+b, strong {font-weight:inherit}
+
+b, strong {font-weight:bolder}
+
+code, kbd, samp {font-family:monospace, monospace;font-size:1em}
+
+dfn {font-style:italic}
+
+mark {background-color:#ff0;color:#000}
+
+small {font-size:80%}
+
+sub, sup {font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+
+sub {bottom:-0.25em}
+
+sup {top:-0.5em}
+
+audio, video {display:inline-block}
+
+audio:not([controls]) {display:none;height:0}
+
+img {border-style:none}
+
+svg:not(:root) {overflow:hidden}
+
+button, input, optgroup, select, textarea {margin:0}
+
+button, input {overflow:visible}
+
+button, select {text-transform:none}
+
+button, html [type="button"], [type="reset"], [type="submit"] {-webkit-appearance:button}
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {border-style:none;padding:0}
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {outline:1px dotted ButtonText}
+
+legend {box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}
+
+progress {display:inline-block;vertical-align:baseline}
+
+textarea {overflow:auto}
+
+[type="checkbox"], [type="radio"] {box-sizing:border-box;padding:0}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {height:auto}
+
+[type="search"] {-webkit-appearance:textfield;outline-offset:-2px}
+
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration {-webkit-appearance:none}
+
+::-webkit-file-upload-button {-webkit-appearance:button;font:inherit}
+
+details, menu {display:block}
+
+summary {display:list-item}
+
+canvas {display:inline-block}
+
+template {display:none}
+
+[hidden] {display:none}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;word-break:keep-all}
+
+table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;font-size:100%;font:inherit;vertical-align:baseline;word-break:keep-all}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+
+body {line-height:1}
+
+ol, ul {list-style:none}
+
+blockquote, q {quotes:none}
+
+blockquote:before, blockquote:after, q:before, q:after {content:'';content:none}
+
+table {border-collapse:collapse;border-spacing:0}
+fieldset, img {border:0 none;vertical-align:top}
+
+img {image-rendering:-webkit-optimize-contrast}
+
+blockquote, q {quotes:none}
+
+blockquote:before, blockquote:after, q:before, q:after {content:'';content:none}
+
+table {width:100%;text-align:left}
+
+button:focus, button:active {padding:0}
+
+input[type="button"], input[type="submit"], input[type="reset"], input[type="file"]::-webkit-file-upload-button, button {padding:0;font-family:"Noto Sans KR", sans-serif;-webkit-appearance:none;-moz-appearance:none;appearance:none}
+
+a {text-decoration:none;cursor:pointer;color:#555}
+
+a:link, a:visited, a:hover, a:active {text-decoration:none}
+
+caption {overflow:hidden;width:1px;height:1px;font-size:20px;line-height:1px;margin-top:-1px}
+
+select, input, button, textarea {-webkit-appearance:none;-moz-appearance:none;appearance:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background-color:transparent;border:0 none;font-size:15px;font-weight:300;font-family:"Noto Sans KR", sans-serif}
+
+select[type="checkbox"], input[type="checkbox"], button[type="checkbox"], textarea[type="checkbox"] {-webkit-appearance:checkbox}
+
+select[type="radio"], input[type="radio"], button[type="radio"], textarea[type="radio"] {-webkit-appearance:radio}
+
+select::-ms-expand, input::-ms-expand, button::-ms-expand, textarea::-ms-expand {display:none}
+
+textarea {overflow-y:scroll;-webkit-overflow-scrolling:touch}
+
+html, body {font-family:"Noto Sans KR", sans-serif;font-size:15px;font-weight:300;color:#555}
+
+strong, h1, h2, h3, h4, h5, h6 {font-weight:400}
+
+label, button {cursor:pointer;overflow:hidden}
+
+a:focus, input:focus {outline:1px dotted #222}
+
+body {-webkit-backface-visibility:hidden}
+
+html {overflow-y:scroll}
+
+html.no-scroll {overflow:hidden;padding-right:17px}
+button {padding:0}
+
+button span {position:relative}
+
+* {-webkit-tap-highlight-color:transparent}
+
+.bg-btn {overflow:hidden;text-indent:-999px}
+
+.icon {display:inline-block;vertical-align:top;overflow:hidden;text-indent:-999px}
+
+.icon img {width:100%}
+
+.hidden-txt {overflow:hidden;display:inline-block;text-indent:-999px;width:0;height:0;line-height:1px;position:absolute}
+
+.point01 {color:#012b5d !important}
+
+.point01 * {color:#012b5d !important}
+
+.point02 {color:#0189b1 !important}
+
+.point02 * {color:#0189b1 !important}
+
+
+.icon {display:inline-block}
+
+#content{ position:relative}
+
+.content.main {overflow:hidden}
+
+.content.main .section01 {height:620px; position:relative;}
+.content.main .section01 .rolling-container {overflow:hidden; position:absolute; top:50%; margin:-308px 0 0; width:100%;}
+
+.content.main .section01 .rolling-container .rolling-wrapper {position:relative;width:1200px;margin:0 auto;height:616px; background-color:#fff;}
+
+.content.main .section01 .rolling-container .rolling-wrapper .rolling-slide .img-box {position:absolute;top:0;left:0;width:690px;height:616px}
+
+.content.main .section01 .rolling-container .rolling-wrapper .rolling-slide .img-box img {width:100%;height:100%}
+
+.content.main .section01 .rolling-container .rolling-wrapper .rolling-slide .cont-box {position:absolute;top:0;left:740px;width:410px;display:none}
+
+.content.main .section01 .rolling-container .rolling-wrapper .rolling-slide .cont-box .inner-group-box {padding-top:55px}
+
+.content.main .section01 .rolling-container .rolling-wrapper .rolling-slide .cont-box .tit {font-family:"NanumSquare", sans-serif;font-weight:400;font-size:40px;line-height:50px;color:#012b5d}
+
+.content.main .section01 .rolling-container .rolling-wrapper .rolling-slide .cont-box .noti-tit {display:block;margin-top:30px;font-family:"NanumSquare", sans-serif;font-weight:400;font-size:22px;line-height:32px;color:#444}
+
+.content.main .section01 .rolling-container .rolling-wrapper .rolling-slide .cont-box .noti-txt {position:relative;display:block;margin-top:72px;font-family:"Noto Sans KR", sans-serif;font-weight:300;font-size:16px;line-height:26px;color:#555}
+
+.content.main .section01 .rolling-container .rolling-wrapper .rolling-slide .cont-box .noti-txt:before {content:"";position:absolute;top:-34px;left:-159px;width:220px;height:3px;background-color:#0189b1}
+
+.content.main .section01 .rolling-container .controller-area {position:absolute;bottom:60px;left:740px;width:410px;z-index:10}
+
+.content.main .section01 .rolling-container .controller-area .btn-area {float:left}
+
+.content.main .section01 .rolling-container .controller-area .btn-area .btn-prev {float:left;width:38px;height:38px;-webkit-border-radius:48px;-moz-border-radius:48px;border-radius:48px;background-color:#012b5d;vertical-align:top}
+
+.content.main .section01 .rolling-container .controller-area .btn-area .btn-prev:hover .icon {margin-left:-8px}
+
+.content.main .section01 .rolling-container .controller-area .btn-area .btn-prev .icon {overflow:hidden;display:inline-block;background-image:url(https://www.kdc.co.kr/ko/images/sprite/main.png?4103601789331);background-position:0px -333px;width:38px;height:38px;vertical-align:top;-webkit-transition:margin .3s ease;-moz-transition:margin .3s ease;-o-transition:margin .3s ease;-ms-transition:margin .3s ease}
+
+.content.main .section01 .rolling-container .controller-area .btn-area .btn-next {float:left;width:38px;height:38px;-webkit-border-radius:48px;-moz-border-radius:48px;border-radius:48px;background-color:#012b5d;vertical-align:top;margin-left:10px}
+
+.content.main .section01 .rolling-container .controller-area .btn-area .btn-next:hover .icon {margin-right:-8px}
+
+.content.main .section01 .rolling-container .controller-area .btn-area .btn-next .icon {overflow:hidden;display:inline-block;background-image:url(https://www.kdc.co.kr/ko/images/sprite/main.png?4103601789331);background-position:0px -112px;width:38px;height:38px;vertical-align:top;-webkit-transition:margin .3s ease;-moz-transition:margin .3s ease;-o-transition:margin .3s ease;-ms-transition:margin .3s ease}
+
+.content.main .section01 .rolling-container .controller-area .indi-area {position:relative;float:right;width:60px;height:35px}
+
+.content.main .section01 .rolling-container .controller-area .indi-area .count {position:absolute;top:0;left:0;font-family:"gotham", sans-serif;font-weight:500;font-size:20px;line-height:.8;color:#012b5d;vertical-align:top}
+
+.content.main .section01 .rolling-container .controller-area .indi-area .icon {position:absolute;top:7px;left:22px;background-image:url(https://www.kdc.co.kr/ko/images/sprite/main.png?4103601789331);background-position:0px -428px;width:21px;height:21px;vertical-align:top}
+
+.content.main .section01 .rolling-container .controller-area .indi-area .total {position:absolute;bottom:0;right:0;font-family:"gotham", sans-serif;font-weight:500;font-size:16px;line-height:.8;color:#a3a3a3;vertical-align:top}
+.content.main .section01 { background-color:rgba(0, 0, 0, 0.5); position:relative;}
+</style>
+ <script type="text/javascript" src="https://www.kdc.co.kr/ko/javascripts/lib/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="https://www.kdc.co.kr/ko/javascripts/lib/TweenMax.min.js"></script>
+</head>
+
+<body>
+<!-- 고려개발 태그 소스와 동일하게 -->
+<!-- 스타일 전부 붙여준다. -->
+<div id="content" >
+                <div class="content main">
+                  
+                    <article class="section01 js-scr-sec">
+                        <h3 class="hidden-txt">사업소개</h3>
+                        <div class="rolling-container">
+                            <div class="rolling-wrapper">
+                                <article class="rolling-slide" data-idx="0">
+                                    <div class="img-box" >
+                                   
+                                        <img src="https://www.kdc.co.kr/ko/images/main/img_section01_02.jpg" alt="">
+                                    </div>
+                                    <div class="cont-box" >
+                                        <div class="inner-group-box">
+                                            <h4 class="tit">건축사업</h4>
+                                            <div class="noti-box">
+                                                <strong class="strong noti-tit">
+                                                    대한민국 건설업계의 선두주자로서
+                                                    <br>
+                                                    국내외 건설문화를 선도하는 건축 비전을
+                                                    <br>
+                                                    제시합니다.
+                                                </strong>
+                                                <p class="noti-txt">
+                                                    고려개발은 1985년 국내 최초의 오피스텔을 선보인 이래 지난 반세기 간의 오랜 역사와 축적된 기술력을 바탕으로 우리나라의 건축문화를 선도해왔습니다.
+                                                    앞으로도 고려개발만의 독특한 설계와 정밀한 시공으로 고객 만족을 실현하는 다양한 미래 공간을 창조해 나가겠습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="rolling-slide" data-idx="1">
+                                    <div class="img-box" >
+                                        <img src="https://www.kdc.co.kr/ko/images/main/img_section01_03.jpg" alt="">
+                                    </div>
+                                    <div class="cont-box" >
+                                        <div class="inner-group-box">
+                                            <h4 class="tit">주택사업</h4>
+                                            <div class="noti-box">
+                                                <strong class="strong noti-tit">
+                                                대한민국 대표 브랜드 아파트 'e편한세상'부터 지역을 대표하는 랜드마크 주거공간까지 고품격 주거문화를 만들어 나갑니다.
+                                                </strong>
+                                                <p class="noti-txt">
+                                                    고려개발은 편안하고 편리한 주거공간을 실현하는 ‘e편한세상’ 보금자리 주택 등 공공아파트와 주상복합에 이르기까지 인간과 자연이 어울리는 건강한 주거문화를 만들고 있습니다.
+                                                    앞으로도 부지 선정에서부터 설계, 시공까지 생활 속에서 가족 모두의 삶의 질 향상을 이룰 수 있는 행복한 주거문화 만들기에 앞장서겠습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="rolling-slide" data-idx="2">
+                                    <div class="img-box" >
+                                        <img src="https://www.kdc.co.kr/ko/images/main/img_section01_01.jpg" alt="">
+                                    </div>
+                                    <div class="cont-box">
+                                        <div class="inner-group-box">
+                                            <h4 class="tit">토목사업</h4>
+                                            <div class="noti-box">
+                                                <strong class="noti-tit">
+                                                    국토의 숨은 가치 창조를 통해
+                                                    <br>
+                                                    대한민국의 풍요로운 미래건설에
+                                                    <br>
+                                                    앞장섭니다.
+                                                </strong>
+                                                <p class="noti-txt">
+                                                    고려개발은 국토의 대동맥을 잇는 경부선, 호남선, 영동선, 서해안, 동해안 고속도로 및 국가 주요 도로 등을 건설해 왔습니다. 또한 ‘전국 반일 생활권’이라는 꿈을 가능하게 한 경부고속철도 시공 및 전국 지하철 시공을 통해 철도 분야에서도 그 기술력을 인정받고 있습니다.
+                                                    고려개발의 토목 역사와 기술력을 바탕으로 건설한국의 미래를 이끌어 가겠습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                <div class="controller-area">
+                                    <div class="btn-area">
+                                        <button type="button" class="btn btn-prev"><i class="icon">사업소개 - 이전이미지 보기</i></button>
+                                        <button type="button" class="btn btn-next"><i class="icon">사업소개 - 다음이미지 보기</i></button>
+                                    </div>
+
+                                    <div class="indi-area">
+                                        <span class="count">01</span>
+                                        <i class="icon"></i>
+                                        <span class="total">03</span>
+                                    </div>
+                                </div>
+                                
+                      
+                                
+                                </div>
+                        </div>
+                    </article>
+                    
+                </div>
+            </div>
+            <script>
+    /* 메인 비쥬얼 */
+
+    var h = $(window).outerHeight();
+    $(".content.main .section01").css({height : h});
+/*    $("#content").css({"padding-top" : h});
+*/
+    $(window).load(function() {
+        (function () {
+            var winH = $(window).height();
+            var $container = $("#spot").find(".rolling-container");
+            var $item = $container.find(".rolling-slide");
+            var $count = $container.find(".indi-area").find(".count");
+            var idx = Math.floor(Math.random() * 6);
+            var leg = $item.length;
+            var text = [];
+            var timer = null;
+            var pause = false;
+
+            function init() {
+                $(".scroll_step").click(function(){
+                    TweenMax.to($("body,html"),.5, {scrollTop:winH});
+                });
+                textPositionSotrage();
+
+                /* 인디게이터 */
+                if (Math.max($item.length, 1) === 1) {
+	                $container.find(".controller-area").hide();
+                } else {
+	                $count.text("0" + (idx + 1));
+	                $container.find(".indi-area").find(".total").text("0" + leg);
+                }
+
+                /* 초기 설정 */
+                $container.css("height", winH);
+                $item.css({"opacity": 0});
+	            TweenMax.set($item.find(".tit"), {opacity : 0, x : -20});
+	            TweenMax.set($item.find(".noti-txt"), {opacity : 0, y : -20});
+
+                $item.eq(idx).css({"z-index": 1}).animate({"opacity": 1});
+
+                /* 초기 모션 */
+                $item.eq(idx).stop(true, false).animate({"opacity": 1}, 1000, function () {
+	                TweenMax.fromTo($(this).find(".tit"), .7, {opacity : 0, x : -20}, {opacity : 1, x : 0});
+	                TweenMax.fromTo($(this).find(".noti-txt"), .5, {opacity : 0, y : -20}, {opacity : 1, y : 0}).delay(.3);
+                    $count.text("0"+(idx+1));
+                });
+
+                /* 1개 이하일경우 작동제어 */
+	            if(Math.max($item.length, 1) === 1) {
+		            return false;
+	            }
+
+                $container.find(".btn-prev").on("click", function () {
+                    var _idx = idx;
+
+                    autoStop();
+                    beforeEvent(_idx);
+
+                    if(Math.max(idx, 0) === 0) idx = leg - 1;
+                    else idx--;
+
+                    afterEvent(idx, _idx);
+                    if (pause === false) {
+                        autoStart();
+                    }
+                });
+
+
+                $container.find(".btn-next").on("click", function () {
+                    var _idx = idx;
+
+                    autoStop();
+                    beforeEvent(_idx);
+
+                    if(Math.max(idx, 0) === leg - 1) idx = 0;
+                    else idx++;
+
+                    afterEvent(idx, _idx);
+                    if (pause === false) {
+                        autoStart();
+                    }
+                });
+
+                $container.find(".btn-play").on("click", function () {
+                    if ($(this).hasClass("pause")) {
+                        pause = false;
+                        autoStart();
+                        $(this).removeClass("pause");
+                        $(this).find(".icon").text("정지"); /* 2018-06-01 수정 */
+                    } else {
+                        pause = true;
+                        autoStop();
+                        $(this).addClass("pause");
+                        $(this).find(".icon").text("재생"); /* 2018-06-01 수정 */
+                    }
+                });
+
+                autoStart();
+            }
+
+            function textPositionSotrage() {
+                $item.find("span").css("opacity", 0);
+                $item.each(function (i, v) {
+                    var sotrage = [];
+                    $(this).find("span").each(function (_i, _v) {
+                        var l = $(this).position().left;
+                        sotrage.push({left: l, idx: _i});
+                    });
+                    text.push(sotrage);
+                });
+            }
+
+            function beforeEvent(pIdx) {
+                $item.eq(pIdx).css({"z-index": 0});
+                $item.eq(pIdx).stop(true, false).animate({"opacity": 0}, 1000);
+	            TweenMax.fromTo($item.eq(pIdx).find(".tit"), .7, {opacity : 1, x : 0}, {opacity : 0, x : -20});
+	            TweenMax.fromTo($item.eq(pIdx).find(".noti-txt"), .5, {opacity : 1, y : 0}, {opacity : 0}).delay(.3);
+            }
+            function afterEvent(pIdx, _idx) {
+//                var count = 0;
+                $item.eq(pIdx).css({"z-index": 1});
+                $item.eq(pIdx).stop(true, false).animate({"opacity": 1}, 1000, function () {
+	                TweenMax.fromTo($(this).find(".tit"), .7, {opacity : 0, x : -20}, {opacity : 1, x : 0, onComplete:callback});
+	                TweenMax.fromTo($(this).find(".noti-txt"), .5, {opacity : 0, y : -20}, {opacity : 1, y : 0}).delay(.5);
+                    $count.text("0"+(idx+1));
+                });
+                function callback() {
+                    $item.eq(_idx).css({"opacity" : 0});
+                }
+            }
+
+            function autoStart() {
+                if (timer === null) {
+                    timer = setTimeout(function () {
+                        $container.find(".btn-next").trigger("click");
+                    }, 6500);
+                }
+            }
+
+            function autoStop() {
+                if (timer !== null) {
+                     clearTimeout(timer);
+                     timer = null;
+                }
+            }
+
+            init();
+        })();
+
+
+        (function () {
+            var $container = $(".section01").find(".rolling-container");
+            var $item = $container.find(".rolling-slide");
+            var $count = $container.find(".indi-area").find(".count");
+            var idx = 0;
+            var leg = $item.length;
+            var w = [-1580, -790, 0, 1300, 2090, 2880];
+            var wLast = 2880;
+            var wFirst = -1580;
+
+            function init() {
+
+                clone();
+                itemStorage();
+
+                if ($container.find(".indi-area").length) {
+                    $count.text("0" + (idx + 1));
+                    $container.find(".indi-area").find(".total").text("0" + leg);
+                }
+
+                $item.each(function (i, v) {
+                    $(this).find(".img-box").css({left : w[i]});
+                });
+
+                $item.eq(2).find(".cont-box").css({"opacity" : 1, "display" : "block"});
+
+                $container.find(".btn-prev").on("click", function () {
+                    var firstW = w.splice(0, 1)[0];
+                    w.push(firstW);
+
+                    $item.each(function (i, v) {
+                        if (w[i] === wFirst) {
+                            $(this).find(".img-box").stop(true, true).css({left : -2370});
+                        }
+                        if (w[i] === 1300) {
+                            $(this).find(".cont-box").stop(true, false).animate({"opacity" : 0}, 600, function () {
+                                $(this).css({"opacity" : 0, "display" : "none"})
+                            });
+                        }
+                        if (w[i] === 0) {
+                            $count.text("0"+($(this).data("idx")+1));
+                            $(this).find(".cont-box").stop(true, false).css({"opacity" : 0, "display" : "block"}).delay(700).stop(true, false).animate({"opacity" : 1});
+                        }
+                        $(this).find(".img-box").stop(true, false).animate({left : w[i]}, 700);
+                    });
+                });
+
+                $container.find(".btn-next").on("click", function () {
+                    var firstW = w.splice(5, 6)[0];
+                    w.unshift(firstW);
+
+                    $item.each(function (i, v) {
+                        if (w[i] === wLast) {
+                            $(this).find(".img-box").stop(true, true).css({left : 3670});
+                        }
+                        if (w[i] === -790) {
+                            $(this).find(".cont-box").stop(true, true).animate({"opacity" : 0}, 600, function () {
+                                $(this).css({"opacity" : 0, "display" : "none"})
+                            });
+                        }
+                        if (w[i] === 0) {
+                            $count.text("0"+($(this).data("idx")+1));
+                            $(this).find(".cont-box").stop(true, false).css({"opacity" : 0, "display" : "block"}).delay(700).stop(true, false).animate({"opacity" : 1});
+                        }
+                        $(this).find(".img-box").stop(true, true).animate({left : w[i]}, 700);
+                    });
+
+                });
+                if(Math.floor(Math.random()*3) === 1){
+                    $container.find(".btn-next").trigger("click");
+                } else if (Math.floor(Math.random()*3) === 2){
+                    $container.find(".btn-prev").trigger("click");
+                }
+            }
+
+            function itemStorage() {
+                var arr = [];
+
+                $item = $container.find(".rolling-slide");
+                arr.push($item.eq(4)[0]);
+                arr.push($item.eq(2)[0]);
+                arr.push($item.eq(0)[0]);
+                arr.push($item.eq(1)[0]);
+                arr.push($item.eq(5)[0]);
+                arr.push($item.eq(3)[0]);
+
+                $item = $(arr);
+            }
+
+            function clone() {
+                var $first = $item.eq(0).clone(true);
+                var $mid = $item.eq(1).clone(true);
+                var $last = $item.eq(-1).clone(true);
+
+                $container.find(".rolling-wrapper").append($first);
+                $container.find(".rolling-wrapper").append($mid);
+                $container.find(".rolling-wrapper").append($last);
+            }
+
+            init();
+        })();
+
+        (function(){
+            if (!$(".section03 .rolling-container").length) return false;
+            $(".section03 .rolling-container").each(function(){
+                var $self = $(this);
+                var $list = $self.find(".rolling-slide");
+                var $img = $list.find(".img-box");
+                var $txt = $list.find(".info-area");
+                var $info = $list.find(".cont-box");
+                var $count = $self.find(".indi-area").find(".count");
+	            var leg = $list.length;
+                var saveIdx = Math.floor(Math.random() * leg);
+                var $saveObj = null;
+                var timer = null;
+                var pause = false;
+
+                function init() {
+                    var txt = [];
+
+	                /* 인디게이터 */
+	                if (Math.max(leg, 1) === 1) {
+		                $self.find(".controller-area").hide();
+	                } else {
+		                if (saveIdx < 9) {
+			                $count.text("0" + (saveIdx + 1));
+		                } else {
+			                $count.text(saveIdx + 1);
+		                }
+		                if (leg < 10) {
+			                $self.find(".indi-area").find(".total").text("0" + leg);
+		                } else {
+			                $self.find(".indi-area").find(".total").text(leg);
+                        }
+                        $list.eq(saveIdx).find(".btn-area").css({display:"block"});
+	                }
+
+                    (function(){
+	                    var $obj = $([$img.eq(saveIdx)[0], $txt.eq(saveIdx)[0], $info.eq(saveIdx)[0]]);
+
+	                    $tween1 = TweenMax.staggerTo($obj, 1, {
+		                    opacity : 1,
+		                    x : 0,
+		                    ease: Power1.easeOut
+	                    }, .3);
+
+	                    $saveObj = $obj;
+                    })();
+
+	                $self.find(".controller-box .btn-prev").on("click", function () {
+		                autoStop();
+		                var idx = saveIdx - 1;
+		                if (idx%leg === -1) {
+			                idx = leg-1;
+		                }
+
+		                var $obj = $([$img.eq(idx)[0], $txt.eq(idx)[0], $info.eq(idx)[0]]);
+
+		                if ($saveObj !== null) {
+			                TweenMax.killTweensOf($saveObj);
+			                TweenMax.staggerTo($saveObj, .4, {
+				                opacity : 0,
+				                ease: Power1.easeOut,
+				                onComplete: _callback,
+				                onCompleteParams:["{self}"],
+			                }, 0.05, play);
+		                } else {
+			                TweenMax.staggerTo($obj, 1, {
+				                opacity : 1,
+				                x : 0,
+				                ease: Power1.easeOut
+			                }, .3);
+		                }
+
+		                saveIdx = idx;
+		                $saveObj = $obj;
+
+		                if (!pause) {
+			                autoStart();
+		                }
+	                });
+
+	                $self.find(".controller-box .btn-next").on("click", function () {
+		                autoStop();
+                        var idx = saveIdx + 1;
+		                if (idx%leg === 0) {
+			                idx = 0;
+		                }
+
+		                var $obj = $([$img.eq(idx)[0], $txt.eq(idx)[0], $info.eq(idx)[0]]);
+
+		                if ($saveObj !== null) {
+			                TweenMax.killTweensOf($saveObj);
+			                TweenMax.staggerTo($saveObj, .4, {
+				                opacity : 0,
+				                ease: Power1.easeOut,
+				                onComplete: _callback,
+				                onCompleteParams:["{self}"]
+			                }, 0.05);
+
+			                TweenMax.staggerTo($obj, .7, {
+				                opacity : 1,
+				                x : 0,
+				                ease: Power1.easeOut
+			                }, .3);
+		                } else {
+			                TweenMax.staggerTo($obj, 1, {
+				                opacity : 1,
+				                x : 0,
+				                ease: Power1.easeOut
+			                }, .3);
+		                }
+
+		                saveIdx = idx;
+		                $saveObj = $obj;
+
+		                countUpdate();
+
+		                if (!pause) {
+			                autoStart();
+		                }
+	                });
+
+                    TweenMax.set($img.add($txt).add($info), {opacity : 0, x : -20});
+
+                    $self.find(".btn-play").on("click", function () {
+                        if ($(this).hasClass("pause")) {
+	                        pause = false;
+                            autoStart();
+                            $(this).removeClass("pause");
+                            $(this).find(".icon").text("정지"); /* 2018-05-21 접근성 수정 */
+                        } else {
+	                        pause = true;
+                            autoStop();
+                            $(this).addClass("pause");
+                            $(this).find(".icon").text("재생"); /* 2018-05-21 접근성 수정 */
+                        }
+                    });
+
+                    autoStart();
+                }
+
+                function countUpdate(){
+	                if (saveIdx < 9) {
+		                $count.text("0" + (saveIdx + 1));
+	                } else {
+		                $count.text(saveIdx + 1);
+	                }
+	                $list.find(".btn-area").css({display:"none"});
+	                $list.eq(saveIdx).find(".btn-area").css({display:"block"});
+                }
+
+                function play() {
+	                countUpdate();
+                    var $obj = $([$img.eq(saveIdx)[0], $txt.eq(saveIdx)[0], $info.eq(saveIdx)[0]]);
+                    TweenMax.staggerTo($obj, .7, {
+                        opacity : 1,
+                        x : 0,
+                        ease: Power1.easeOut
+                    }, .3);
+                }
+
+                function _callback(tween) {
+                    TweenMax.set(tween.target, {x : -20});
+                }
+
+                function autoStart() {
+                    if (timer === null) {
+                        timer = setTimeout(function () {
+	                        $self.find(".controller-box .btn-next").trigger("click");
+                        }, 6500);
+                    }
+                }
+
+                function autoStop() {
+                    if (timer !== null) {
+                        clearTimeout(timer);
+                        timer = null;
+                    }
+                }
+
+                init();
+            });
+        })();
+
+        TweenMax.set($(".main .js-scr-box"), {y:50, opacity:0});
+        var $jsScrSec = $(".js-scr-sec"); //js-scr-sec - 패럴럭스 효과 시작 박스 / 하위 js-scr-box 와 셋트
+        var $container = $("#spot").find(".rolling-container");
+
+        var scrInnerStep = []; //각 페이지의 js-scr-sec 위치 저장
+        var winSc = 0;
+        var winH = $(window).height();
+        var mainScrCurrent = 0;
+        var scrollStep = "stop";
+
+        var $mainIndi = $("#menu");
+        var $mainIndLi = $("#menu li");
+
+        function scrollEvent() {
+            $(window)[0].addEventListener("mousewheel", scr);
+            function scr(e){
+                mainScrCurrent = Math.ceil(winSc/winH);
+                if (e.wheelDelta === undefined) {
+                    var wheel_scroll = e.originalEvent.wheelDelta;
+                } else {
+                    var wheel_scroll = event.wheelDelta;
+                }
+                if(wheel_scroll >= 120){
+                    if(mainScrCurrent === 1 || mainScrCurrent === 2 || mainScrCurrent === 3 && scrollStep === "stop"){
+                        scrollStep = "play";
+                        mainScrCurrent--;
+                        $container.find(".btn-play").trigger("click");
+                        downSlide(mainScrCurrent);
+                    }
+                } else if(wheel_scroll <= -120){
+                    if( mainScrCurrent === 0  || mainScrCurrent === 1 || mainScrCurrent === 2 && scrollStep === "stop"){
+                        scrollStep = "play";
+                        mainScrCurrent++;
+                        $container.find(".btn-play").trigger("click");
+                        downSlide(mainScrCurrent);
+                    }
+                }
+                mainIndiActive(mainScrCurrent);
+            }
+            function downSlide(_mainScrCurrent){
+                if (!TweenMax.isTweening($("html,body"))) {
+                    TweenMax.to($("html,body"), 0.5,{scrollTop:winH*_mainScrCurrent, onComplete: end});
+                }
+            }
+            $mainIndLi.click(function(){
+                var _this = $(this).index();
+                 downSlide(_this);
+                 mainIndiActive(_this);
+            });
+            function mainIndiActive(_mainScrCurrent){
+                $mainIndLi.removeClass("active");
+                if(_mainScrCurrent < 3){
+                    $mainIndi.removeClass("indi_active");
+                    $mainIndLi.eq(_mainScrCurrent).addClass("active");
+                } else {
+                    $mainIndi.addClass("indi_active");
+                    $mainIndLi.eq(3).addClass("active");
+                }
+            }
+            function end(){
+                scrollStep = "stop";
+            }
+            $(window).scroll(function(){
+                winSc = $(this).scrollTop();
+                scrollMotion(winSc);
+                if(winSc === 0){
+                    $("#content").css({zIndex:0});
+                } else {
+                    $("#content").css({zIndex:100});
+                }
+                $jsScrSec.each(function(){
+                    var _this = $(this);
+                    var secTop = _this.offset().top;
+                    var secInner = secTop - (winH / 2) - 150;
+                    scrInnerStep.push([_this,secInner]);
+                });
+
+                function scrollMotion(_winSc) {
+                    $.each(scrInnerStep, function (i, v) {
+                        if (_winSc >= v[1]) {
+                            if (v[0].motion === undefined) {
+                                TweenMax.staggerTo(v[0].find(".js-scr-box"), .8, {y: 0, opacity: 1}, .3);
+                                v[0].motion = true;
+                            }
+                        }
+                    });
+                }
+            });
+        }
+        scrollEvent();
+    });
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>제이쿼리를 활용한 faq만들기 수업</title>
+<link rel="stylesheet" href="/happy/css/common.css" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR');
+#faq{ max-width:800px; margin:0 auto;font-family: 'Noto Sans KR', sans-serif;} 
+#faq h3{ font-size:1.5em; text-align:center}
+#faq ul{ margin-top:50px}
+#faq ul li{ padding:10px 0; border-top:2px solid black;}
+#faq ul li button{ float:right;}
+#faq ul li button:after{ content:"+";}
+/*활성화*/
+#faq ul li.open button{}
+#faq ul li.open button:after{ content:"-";}
+
+#faq ul li p{ overflow:hidden;}
+#faq div{ display:none}
+#faq ul li.open div{ display:block}
+</style>
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <script src="/study/js/20181001.js"></script>
+</head>
+
+<body>
+<section id="faq">
+	<h3>제품에 대한 질문과 답변</h3>
+	<ul>
+		<li>
+			<p>제목이 되겠습니다 <button></button></p> <!--p,div태그는 블럭태그라서 형제태그로 처리하는것보단 p태그 안쪽에넣는게 적합-->
+			<div>복잡한 내용은 나중에 처리</div>
+		</li>
+		<li>
+			<p>제목이 되겠습니다<button></button></p>
+			<div>복잡한 내용은 나중에 처리</div>
+		</li>
+		<li>
+			<p>제목이 되겠습니다<button></button></p>
+			<div>복잡한 내용은 나중에 처리</div>
+		</li>
+		<li>
+			<p>제목이 되겠습니다<button></button></p>
+			<div>복잡한 내용은 나중에 처리</div>
+		</li>
+		<li>
+			<p>제목이 되겠습니다<button></button></p>
+			<div>복잡한 내용은 나중에 처리</div>
+		</li>
+		<li>
+			<p>제목이 되겠습니다<button></button></p>
+			<div>복잡한 내용은 나중에 처리</div>
+		</li>
+		<li>
+			<p>제목이 되겠습니다<button></button></p>
+			<div>복잡한 내용은 나중에 처리</div>
+		</li>
+	</ul>
+</section></body>
+</html>
